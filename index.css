@@ -8,7 +8,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    color: #000000;
     line-height: 1.6;
 }
 
@@ -22,7 +22,7 @@ ul {
 }
 
 h1, h2, h3, h4 {
-    color: #333;
+    color: #ff0000;
     margin-bottom: 15px;
 }
 
@@ -34,6 +34,10 @@ header {
     padding: 20px;
     background-color: #222;
     color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    margin-top: -100px;
 }
 
 header .logo h1 {
@@ -65,13 +69,14 @@ header nav ul li {
 
 /* Hero Section */
 .hero {
-    background-image: url('montana-background.jpg');
+    
     background-size: cover;
     background-position: center;
     padding: 150px 20px;
     color: white;
     text-align: center;
     position: relative;
+
 }
 
 .hero::before {
@@ -81,13 +86,15 @@ header nav ul li {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0);
+    
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
+    margin-top: 100px;
 }
 
 .hero h2 {
@@ -123,6 +130,8 @@ header nav ul li {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 50px 20px;
+    background-color: #f4f4f4;
+    border-radius: 22px;
 }
 
 .feature-card {
@@ -212,4 +221,15 @@ footer p {
         flex-direction: column;
         gap: 15px;
     }
+}
+
+#main {
+    padding: 30px;
+    background-image: url('montana-background.jpg');
+    position: absolute;
+
+}
+
+.content {
+    margin-top: 100px;
 }
